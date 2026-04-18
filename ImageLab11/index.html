@@ -5,11 +5,20 @@
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-assets>
+        <a-asset-item id="IrishRock" src="Assets/IrishRock.obj"></a-asset-item>
+        <a-asset-item id="MyRoom" src="Assets/MyRoom.obj"></a-asset-item>
+        <img id="MyRoomTexture" src="Assets/MyRoom.mtl">
+        <a-asset-item id="ChironTL34" src="Assets/4_17_2026.glb"></a-asset-item>
+        <a-asset-item id="Carcharodontosaurus" src="Assets/TestRoom.glb"></a-asset-item>
+        <img id="CircScape" src="Assets/CircScape.png">
+        <a-asset-item id="DanDan" src="Assets/DanDan.glb"></a-asset-item>
+      </a-assets>
+      
+      <a-entity gltf-model="#Carcharodontosaurus" position="0 1.5 0" rotation="0 -90 0"></a-entity>
+      <a-entity gltf-model="#DanDan" position="1 1.25 0" scale=".2 .2 .2" rotation="0 -90 0"></a-entity>
+
+      <a-sky src="#CircScape"></a-sky>
     </a-scene>
   </body>
 </html>
